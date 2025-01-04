@@ -27,7 +27,7 @@ LICENSE  MCL_demo.py  README.md
 $ python3 MCL_demo.py
 ```
 
-[![実行例の出力図](/example.png "実行時に出力される図例")]
+[![実行例の出力図](https://github.com/user-attachments/assets/679ebe24-bf9b-4fcc-a875-5b78c76459bd "実行時の出力例")]
 
 # License
 * このソフトウェアパッケージは, [3条項BSDライセンス](https://opensource.org/license/bsd-3-clause/)の下, 再配布および使用が許可されています. 
