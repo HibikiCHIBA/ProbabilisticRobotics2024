@@ -9,12 +9,12 @@ import time
 # 定義
 line_size = 100         # 数直線の長さ
 time_remit = 100        # 動作時間
-num_particles = 1000    # 粒子数
+num_particles = 1000    # パーティクルの数
 motion_noise = 1.0      # 動作時のノイズ
 sensor_noise = 2.0      # センサのノイズ
 true_position = 50      # ロボットの真値（初期位置設定）
 
-# 粒子の初期化
+# パーティクルの初期化
 particles = np.random.uniform( 0, line_size, num_particles )
 weights = np.ones( num_particles ) / num_particles
 
@@ -27,13 +27,13 @@ def move( position, distance ):
 def sense( true_position ):
     return true_position + np.random.normal(0, sensor_noise)
 
-# 粒子の重みを更新
+# パーティクルの重みを更新
 def weight_update( particles, measurement ):
     weights = np.exp( -( ( particles - measurement ) ** 2 ) / ( 2 * sensor_noise ** 2 ) )
     weights += 1e-300  # ゼロ除算を防ぐ
     return weights / weights.sum()
 
-# 重みを考慮して粒子をリサンプリング
+# 重みを考慮してパーティクルをリサンプリング
 def resample( particles, weights ):
     indices = np.random.choice( range( num_particles ), size=num_particles, p=weights )
     return particles[ indices ]
@@ -53,7 +53,7 @@ try:
         true_position = move( true_position, move_distance )
         true_positions.append( true_position )
 
-        # 観測
+        # 演算処理
         measurement = sense( true_position )
 
         # 重み更新
