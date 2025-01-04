@@ -3,16 +3,16 @@
 千葉工業大学 上田隆一先生の講義 確率ロボティクス 2024年度版の内容に沿って作成した課題の提出用リポジトリ
 
 # Install
-インストールは, 下記コマンドのようにインストールしたいGithubページのURLを挿入することで開始される. インストールが終了したら, robosys2023ディレクトリへ移動し, 内部ファイルが正しくインストールされているかを確認すること. 
+インストールは, 下記コマンドのようにインストールしたいGithubページのURLを挿入することで開始される. インストールが終了したら, ProbabilisticRobotics2024ディレクトリへ移動し, 内部ファイルが正しくインストールされているかを確認すること. 
 ```
 $ git clone https://github.com/HibikiCHIBA/ProbabilisticRobotics2024.git
 $ cd ProbabilisticRobotics2024
 $ ls
-LICENSE  README.md  MLC_demo.py
+LICENSE  MCL_demo.py  README.md
 ```
 
-# MLC_demo
-1, -2, 3, -4, …, といった数列から標準入力値(自然数)で指定した数列の整数までの総和を計算する. 例えば標準入力値が, 1, 2, 3, 4, …, であった場合, 出力は, 1, -1, 2, -2, …, となる. 
+# MCL_demo
+初期位置を50(0〜100)として，1次元の数直線上を左右に動くロボットを想定し，MCL(Monte Carlo Localization)を使用して目標位置へ追従するシミュレーションデモを実装した．なお，目標位置は乱数で決定される． 
 
 # Environment
 * Ubuntu 20.04.4 LTS
